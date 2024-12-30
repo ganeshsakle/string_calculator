@@ -30,4 +30,14 @@ RSpec.describe StringCalculator do
       "50,7".extend(StringCalculator).add == 57
     end
   end
+
+  context "Three digit number" do
+    it "Should return 9 for 2,3,4" do
+      "2,3,4".extend(StringCalculator).add == 9
+    end
+
+    it "Should return 557 for 50,7,500" do
+      "50,7,500".extend(StringCalculator).add == 557
+    end
+  end
 end
