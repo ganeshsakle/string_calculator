@@ -40,4 +40,14 @@ RSpec.describe StringCalculator do
       "50,7,500".extend(StringCalculator).add == 557
     end
   end
+
+  context "digits with new line delimiter" do
+    it "Should return 9 for 2\n" do
+      "2\n7".extend(StringCalculator).add == 9
+    end
+
+    it "Should return 6 for //;\n1;2;3" do
+      "//;\n1;2;3".extend(StringCalculator).add == 557
+    end
+  end
 end
