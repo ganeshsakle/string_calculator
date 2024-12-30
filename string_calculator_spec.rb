@@ -20,4 +20,14 @@ RSpec.describe StringCalculator do
       "35".extend(StringCalculator).add == 35
     end
   end
+
+  context "Two digit number" do
+    it "Should return 8 for 4,4" do
+      "4,4".extend(StringCalculator).add == 8
+    end
+
+    it "Should return 57 for 50,7" do
+      "50,7".extend(StringCalculator).add == 57
+    end
+  end
 end
