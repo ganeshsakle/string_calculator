@@ -1,5 +1,6 @@
 module StringCalculator
-  def self.add
-    0
+  def add
+    return 0 if empty?
+    to_i
   end
 end
