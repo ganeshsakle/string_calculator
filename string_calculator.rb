@@ -1,6 +1,7 @@
 module StringCalculator
   def add
     return 0 if empty?
+    raise "Negative numbers it not allowed" if include?('-')
     digits.inject { |sum, curr| sum + curr }
   end
 

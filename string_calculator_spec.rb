@@ -50,4 +50,10 @@ RSpec.describe StringCalculator do
       "//;\n1;2;3".extend(StringCalculator).add == 557
     end
   end
+
+  context "Negative numbers" do
+    it "Raise an exception if negative digit present" do
+      -> {"-8,1,-2".extend(StringCalculator).add}.should raise_error
+    end
+  end
 end
